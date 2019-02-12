@@ -2,7 +2,7 @@ import javax.swing.JFrame;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class MyFrame extends JFrame implements KeyListener{
+public  class MyFrame extends JFrame implements KeyListener{
 
 	Draw drawing;
 
@@ -35,15 +35,17 @@ public class MyFrame extends JFrame implements KeyListener{
 			drawing.punch();
 			System.out.println("punch");
 		}
+		else if(e.getKeyCode() == KeyEvent.VK_S){
+            drawing.spawnEnemy();
+		}
 	}
-
 	public void keyReleased(KeyEvent e){
 
-	}
+    }
 
-	public void keyTyped(KeyEvent e){
-		
-	}
+    public void keyTyped(KeyEvent e){
+        
+    }
 
 	public static void main(String args[]){
 		MyFrame gameFrame = new MyFrame();
